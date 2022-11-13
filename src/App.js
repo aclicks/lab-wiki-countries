@@ -4,16 +4,22 @@ import {Routes, Route} from 'react-router-dom';
 import CountriesList from "./Components/CountriesList";
 import list from './countries.json'
 import CountryDetails from "./Pages/CountryDetails";
+import {useState} from 'react'; 
 
 function App() {
-  return <div className="App">
-    <Navbar />
-    <CountriesList list={list}/>
-    <Routes>
-      {/* <Route path='/' element='HomePage'/> */}
-      {/* <Route path='/CountryDetails' element={<CountryDetails/>} /> */}
-    </Routes>
-  </div>;
+  
+  const [allCountries, setAllCountries] = useState(list); 
 
+  return (
+  <div className="App">
+    <Navbar />
+    <div>
+    <CountriesList allCountries={allCountries}/>
+    </div>
+    <Routes>
+     <Route path="country/:countryID" element={ <CountryDetails allCountries={allCountries} /> } />
+    </Routes>
+  </div>
+  )
 }
 export default App;
