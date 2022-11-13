@@ -12,7 +12,7 @@ function CountryDetails({ allCountries }) {
   );
 
   return (
-    <div>
+    <div className="col-7">
       <h1>{countrySelected.name.official}</h1>
       <h2>Capital</h2>
     {countrySelected.capital}

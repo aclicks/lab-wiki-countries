@@ -17,11 +17,11 @@ function App() {
       <div className='row' >
 
     <CountriesList allCountries={allCountries}/>
-      </div>
-    </div>
     <Routes>
      <Route path="country/:countryID" element={ <CountryDetails allCountries={allCountries} /> } />
     </Routes>
+      </div>
+    </div>
   </div>
   )
 }

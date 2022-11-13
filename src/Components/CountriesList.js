@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 function CountriesList({ allCountries }) {
   return (
-    <div className='col-5' >
+    <div className='col-5'>
       {allCountries.map((e) => {
         return (
           <div className="list-group" key={e.alpha3Code}>
