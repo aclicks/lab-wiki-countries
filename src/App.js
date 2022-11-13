@@ -13,8 +13,11 @@ function App() {
   return (
   <div className="App">
     <Navbar />
-    <div>
+    <div className='container'>
+      <div className='row' >
+
     <CountriesList allCountries={allCountries}/>
+      </div>
     </div>
     <Routes>
      <Route path="country/:countryID" element={ <CountryDetails allCountries={allCountries} /> } />
